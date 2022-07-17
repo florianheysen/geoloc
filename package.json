@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
+    "@heroicons/react": "^1.0.6",
     "@supercharge/request-ip": "^1.2.0",
     "axios": "^0.27.2",
     "flowbite": "^1.4.7",
@@ -17,6 +19,7 @@
     "next": "12.2.2",
     "node-cache": "^5.1.2",
     "react": "18.2.0",
+    "react-country-flag": "^3.0.2",
     "react-dom": "18.2.0"
   },
   "devDependencies": {

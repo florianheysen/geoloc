@@ -1,22 +1,13 @@
 import React from 'react'
 
+function Nav() {
+
 var script = String.raw`<script defer src="https://geoloc-red.vercel.app/api/js"></script>
 <script>
     document.addEventListener('geoloc-loaded', () => {
-       console.log(geoloc.country) // FR 
+       console.log(geoloc.country) // Will return FR 
     });
 </script>`
-
-function Nav({data}) {
-
-    var json = String.raw`{
-    "longitude": "${data.longitude || "3.7822"}",
-    "latitude": "${data.latitude || "50.3175"}",
-    "country": "${data.country || "FR"}",
-    "region": "${data.region || "Hauts-de-France"}",
-    "timezone": "${data.timezone || "Europe/Paris"}",
-    "asOrganization": "${data.asOrganization || "Orange"}"
-}`
 
   return (
     <section className="pt-5 pb-6">
@@ -30,7 +21,7 @@ function Nav({data}) {
                     Show personalized content to you users based on their IP geolocation, 
                     with a <span className="text-sky-400">small</span>, <span className="text-sky-400">fast</span> and <span className="text-sky-400">globally distributed</span> javascript file.
                 </p>
-                <a href="#" className="text-white focus:outline-none focus:ring-4 font-semibold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-gray-800 hover:bg-gray-700 focus:ring-gray-700 dark:border-gray-700">
+                <a href="#getStarted" className="text-white focus:outline-none focus:ring-4 font-semibold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-gray-800 hover:bg-gray-700 focus:ring-gray-700 dark:border-gray-700">
                     Get started
                 </a>
                 <a href="https://github.com/florianheysen/geoloc" target="_blank" rel="noreferrer" type="button" className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-700 font-semibold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 text-center inline-flex items-center">
@@ -47,21 +38,8 @@ function Nav({data}) {
                         <div className="border border-slate-600"></div>
                         <div className="border border-slate-600"></div>
                     </div>
-                    <pre className="language-html">
-                        <code className="language-html">{script}</code>
-                    </pre>
-                </div>
-                <p className="py-4 text-slate-400">
-                    Geoloc is a service that provides geolocation information about the current user using a lightweight javascript file. any page that has the script tag in the DOM will have access to a global <span className="text-slate-100 font-consolas">`geoloc`</span> object containing at-least the following information
-                </p>
-                <div className="code-window">
-                    <div className="dots">
-                        <div className="border border-slate-600"></div>
-                        <div className="border border-slate-600"></div>
-                        <div className="border border-slate-600"></div>
-                    </div>
-                    <pre className="language-json">
-                        <code className="language-json">{json}</code>
+                    <pre className="language-html line-numbers">
+                        <code className="language-html line-numbers">{script}</code>
                     </pre>
                 </div>
             </div>

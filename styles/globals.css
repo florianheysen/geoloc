@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;  
 
+::selection{
+  background-color: #7dd4fc34;
+}
+
 body{background-color: #090e1a;}
 
 h1, h2, h3, h4, h5, p , a, button{font-family: 'DM Sans', sans-serif; color: white}
@@ -82,7 +86,7 @@ h1, h2, h3, h4, h5, p , a, button{font-family: 'DM Sans', sans-serif; color: whi
   .token.constant,
   .token.symbol,
   .token.deleted {
-    color: #fff; }
+    color: #f472b6; }
   
   .token.boolean,
   .token.number {
@@ -111,7 +115,7 @@ h1, h2, h3, h4, h5, p , a, button{font-family: 'DM Sans', sans-serif; color: whi
     color: #f472b6; }
   
   .token.keyword {
-    color: #aa00ff; }
+    color: #fff; }
   
   .token.regex,
   .token.important {
@@ -157,7 +161,7 @@ h1, h2, h3, h4, h5, p , a, button{font-family: 'DM Sans', sans-serif; color: whi
   
   .line-numbers-rows > span:before {
     content: counter(linenumber);
-    color: #ced4da;
+    color: #28394a;
     display: block;
     padding-right: 0.8em;
     text-align: right; }
