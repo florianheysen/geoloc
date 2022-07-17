@@ -16,7 +16,7 @@ function Nav({data}) {
         "region": "${data?.region}",
         "timezone": "${data?.timezone}",
         "asOrganization": "${data?.asOrganization}"
-    }`
+}`
 
 
 
