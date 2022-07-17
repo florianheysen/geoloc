@@ -32,7 +32,7 @@ export default function Home() {
       </Head>
 
       <Nav />
-      <Hero />
+      <Hero data={data} />
 
 
       <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>

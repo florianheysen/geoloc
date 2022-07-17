@@ -5,19 +5,21 @@ var script = String.raw`<script defer src="https://geoloc-red.vercel.app/api/js"
     document.addEventListener('geoloc-loaded', () => {
        console.log(geoloc.country) // US 
     });
-</script>
-`
+</script>`
 
-var json = String.raw`{
-    "longitude": 3.7822,
-    "latitude": 50.3175,
-    "country": "FR",
-    "region": "Hauts-de-France",
-    "timezone": "Europe/Paris",
-    "asOrganization": "Orange"
-}`
+function Nav({data}) {
 
-function Nav() {
+    var json = String.raw`{
+        "longitude": "${data?.longitude}",
+        "latitude": "${data?.latitude}",
+        "country": "${data?.country}",
+        "region": "${data?.region}",
+        "timezone": "${data?.timezone}",
+        "asOrganization": "${data?.asOrganization}"
+    }`
+
+
+
   return (
     <section className="bg-gradient pt-5 pb-6">
     <div className="container">
