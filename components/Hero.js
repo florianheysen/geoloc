@@ -19,7 +19,7 @@ var script = String.raw`<script defer src="https://geoloc-red.vercel.app/api/js"
                 </h1>
                 <p className="lead my-5 text-lg text-slate-400">
                     Show personalized content to you users based on their IP geolocation, 
-                    with a <span className="text-sky-400">small</span>, <span className="text-sky-600">fast</span> and <span className="text-sky-400">globally distributed</span> javascript file.
+                    with a <span className="text-sky-400">small</span>, <span className="text-sky-400">fast</span> and <span className="text-sky-400">globally distributed</span> javascript file.
                 </p>
                 <a href="#getStarted" className="text-white focus:outline-none focus:ring-4 font-semibold rounded-lg text-sm px-5 py-3 mr-2 mb-2 bg-gray-800 hover:bg-gray-700 focus:ring-sky-400">
                     Get started
