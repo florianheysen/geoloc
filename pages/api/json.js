@@ -7,7 +7,6 @@ const Cache = new NodeCache({ stdTTL : 1})
 export default function handler(req, res) {
     if(Cache.has('dataCached')){
         res.status(200).json(Cache.get('dataCached'));
-        console.log('cache ok')
     } else {
       const ip = RequestIp.getClientIp(req);
       const UrlGeoApi = `http://ip-api.com/json/${ip}`;
