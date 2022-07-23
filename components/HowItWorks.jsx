@@ -76,11 +76,11 @@ var javascript = String.raw`async function getGeolocInfo(){
                     </pre>
                 </div>
                 <div className="flex mt-4 p-4 text-sm rounded-lg bg-[#0f172a] text-slate-300" role="alert">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="#94a3b8" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                 <div>
-                        <p>This &quot;/json&quot; endpoint cannot be used on server-side as it will return the informations about the server&apos;s IP address.</p>
+                        <p className="text-slate-400">This &quot;/json&quot; endpoint cannot be used on server-side as it will return the informations about the server&apos;s IP address.</p>
                     </div>
                 </div>
             </div>
