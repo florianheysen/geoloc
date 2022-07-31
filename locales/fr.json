@@ -1,0 +1,36 @@
+{
+    "Hero": {
+        "title": "Géolocalisation sous forme de script.",
+        "desc1": "Montrez un contenu personnalisé à vos utilisateurs en fonction de leur géolocalisation IP, avec un fichier ",
+        "desc2" : "léger",
+        "desc3": "rapide",
+        "desc4": "et",
+        "desc5": "distribué dans le monde entier",
+        "desc6" : ".",
+        "cta1": "Démarrer",
+        "cta2": "Contribuer",
+        "comment": "Retournera FR"
+    },
+    "Features": {
+        "title": "Pourquoi devrais-je l'utiliser ?",
+        "f1t": "Léger",
+        "f1d": "moins de 0.3kb non compressé.",
+        "f2t": "Très rapide",
+        "f2d": "Distribué dans le monde entier, vos utilisateurs seront servis par le serveur le plus proche.",
+        "f3t": "Configuration simple",
+        "f3d": "Vous n'avez pas besoin de clé API, il suffit d'ajouter la balise script et vous êtes prêt !"
+    },
+    "How": {
+        "title": "Comment ça fonctionne ?",
+        "desc1": "Geoloc est un service qui fournit des informations de géolocalisation sur l'utilisateur actuel en utilisant un fichier javascript léger. Toute page qui a la balise script dans le DOM aura accès à un objet global",
+        "desc2" : "contenant les informations suivantes :",
+        "subtitle1" : "Accès par script asynchrone",
+        "text1" : "Vous pouvez charger le script de manière asynchrone pour qu'il n'ait que peu ou pas d'impact sur les performances de chargement de votre page. Vous pouvez lier un événement au document pour exécuter une fonction dès que les informations de géolocalisation sont disponibles.",
+        "comment1" : "Charge la balise script avec l'attribut defer ou async",
+        "comment2" : "Attends l'événement 'geoloc-loaded' avant d'utiliser la variable globale 'geoloc'",
+        "comment3" : "Retournera FR",
+        "subtitle2": "Accès par objet JSON",
+        "text2": "Si vous n'avez pas besoin que les informations de géolocalisation soient disponibles globalement et que vous souhaitez uniquement les récupérer à la demande, vous pouvez utiliser le point de terminaison /json, voir l'exemple ci-dessous.",
+        "disclaimer": "Ce point de terminaison '/json' ne peut pas être utilisé côté serveur car il renverrait des informations sur l'adresse IP du serveur."
+    }
+}

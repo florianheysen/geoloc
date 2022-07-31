@@ -1,0 +1,36 @@
+{   
+    "Hero": {
+        "title": "Geolocation as a script.",
+        "desc1": "Show personalized content to you users based on their IP geolocation, with a ",
+        "desc2" : "small",
+        "desc3": "fast",
+        "desc4": "and",
+        "desc5": "globally distributed ",
+        "desc6" : "javascript file.",
+        "cta1": "Get Started",
+        "cta2": "Contribute",
+        "comment": "Will return EN"
+    },
+    "Features": {
+        "title": "Why should I use it ?",
+        "f1t": "Lightweight",
+        "f1d": "less than 0.3kb uncompressed.",
+        "f2t": "Super Fast",
+        "f2d": "Distribued worldwide, your users will be served from the nearest edge server.",
+        "f3t": "Quick Setup",
+        "f3d": "Zero configuration, you don't need an API key, just add the script tag, and you are ready!"
+    },
+    "How": {
+        "title": "How it works ?",
+        "desc1": "Geoloc is a service that provides geolocation information about the current user using a lightweight javascript file. Any page that has the script tag in the DOM will have access to a global",
+        "desc2" : "object containing the following informations :",
+        "subtitle1" : "Using Async script",
+        "text1" : "You can load the script asynchronously that it will have little to no impact on your page load performance, and you can bind an event to the document to execute a function as soon as the geolocation information is available.",
+        "comment1" : "Load the script tag with either defer or async attribute",
+        "comment2" : "Wait for the 'geoloc-loaded' event before using the global 'geoloc' variable",
+        "comment3" : "Will return EN",
+        "subtitle2": "Using as JSON endpoint",
+        "text2": "If you don't need the geolocation information to be available globally and only want to fetch it on-demand, you can use the /json endpoint, see example below.",
+        "disclaimer": "This '/json' endpoint cannot be used on server-side as it will return the informations about the server's IP address."
+    }
+}

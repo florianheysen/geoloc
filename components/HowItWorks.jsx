@@ -1,23 +1,38 @@
 import React from 'react'
+import { useRouter } from 'next/router'
+
+import en from '../locales/en'
+import fr from '../locales/fr'
+import cn from '../locales/cn'
 
 function HowItWorks({data}) {
 
+    const router = useRouter()
+    const { locale } = router;
+    if(locale === 'en'){
+        var lang = en
+    } if(locale === 'fr'){
+        var lang = fr
+    } if(locale === 'cn'){
+        var lang = cn
+    }
+
     var json = String.raw`{
-    "longitude": "${data.longitude || "3.7822"}",
-    "latitude": "${data.latitude || "50.3175"}",
-    "country": "${data.country || "FR"}",
-    "region": "${data.region || "Hauts-de-France"}",
-    "timezone": "${data.timezone || "Europe/Paris"}",
-    "asOrganization": "${data.asOrganization || "Orange"}"
+    "longitude": "${data.longitude || "-80.484"}",
+    "latitude": "${data.latitude || "27.0614"}",
+    "country": "${data.country || "US"}",
+    "region": "${data.region || "Florida"}",
+    "timezone": "${data.timezone || "America/New_York"}",
+    "asOrganization": "${data.asOrganization || "Verizon"}"
 }`
 
-var code = String.raw`<!-- Load the script tag with either defer or async attribute -->
+var code = String.raw`<!-- ${lang.How.comment1} -->
 <script defer src="https://geoloc-red.vercel.app/api/js"></script>
 
-<!-- Wait for the 'geoloc-loaded' event before using the global 'geoloc' variable -->
+<!-- ${lang.How.comment2} -->
 <script>
     document.addEventListener('geoloc-loaded', () => {
-       console.log(geoloc.country) // Will return FR  
+       console.log(geoloc.country) // ${lang.How.comment3}
     });
 </script>`
 
@@ -27,12 +42,12 @@ var javascript = String.raw`async function getGeolocInfo(){
 }`
 
   return (
-    <div className="container mx-auto pb-10" id="getStarted">
+    <div className="container mx-auto pb-10" id="start">
         <div className="row mt-5">
             <div className="mx-auto">
-                <h2 className="text-2xl pt-4 font-medium">How it works ?</h2>
+                <h2 className="text-2xl pt-4 font-medium">{lang.How.title}</h2>
                 <p className="py-4 text-slate-400">
-                    Geoloc is a service that provides geolocation information about the current user using a lightweight javascript file. Any page that has the script tag in the DOM will have access to a global <span className="text-slate-100 font-consolas">`geoloc`</span> object containing the following informations.
+                    {lang.How.desc1} <span className="text-slate-100 font-consolas">`geoloc`</span> {lang.How.desc2}
                 </p>
                 <div className="code-window">
                     <div className="dots">
@@ -46,9 +61,9 @@ var javascript = String.raw`async function getGeolocInfo(){
                 </div>
             </div>
             <div className="mx-auto">
-                <h2 className="text-xl pt-4 font-base">Using Async script</h2>
+                <h2 className="text-xl pt-4 font-base">{lang.How.subtitle1}</h2>
                 <p className="py-4 text-slate-400">
-                    You can load the script asynchronously that it will have little to no impact on your page load performance, and you can bind an event to the document to execute a function as soon as the geolocation information is available.
+                    {lang.How.text1}
                 </p>
                 <div className="code-window">
                     <div className="dots">
@@ -62,9 +77,10 @@ var javascript = String.raw`async function getGeolocInfo(){
                 </div>
             </div>
             <div className="mx-auto">
-                <h2 className="text-xl pt-4 font-base">Using as JSON endpoint</h2>
+                <h2 className="text-xl pt-4 font-base">{lang.How.subtitle2}</h2>
                 <p className="py-4 text-slate-400">
-                    If you don&apos;t need the geolocation information to be available globally and only want to fetch it on-demand, you can use the /json endpoint, see example below.</p>
+                    {lang.How.text2}
+                </p>
                 <div className="code-window">
                     <div className="dots">
                         <div className="border border-slate-600"></div>
@@ -80,7 +96,7 @@ var javascript = String.raw`async function getGeolocInfo(){
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                 <div>
-                        <p className="text-slate-400">This &quot;/json&quot; endpoint cannot be used on server-side as it will return the informations about the server&apos;s IP address.</p>
+                        <p className="text-slate-400">{lang.How.disclaimer}</p>
                     </div>
                 </div>
             </div>

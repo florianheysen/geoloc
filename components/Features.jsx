@@ -1,10 +1,26 @@
 import React from 'react'
+import { useRouter } from 'next/router'
+
+import en from '../locales/en'
+import fr from '../locales/fr'
+import cn from '../locales/cn'
 
 function Features() {
+
+  const router = useRouter()
+  const { locale } = router;
+    if(locale === 'en'){
+        var lang = en
+    } if(locale === 'fr'){
+        var lang = fr
+    } if(locale === 'cn'){
+        var lang = cn
+    }
+
   return (
   <div className="container mx-auto mt-3">
     <div className="max-w-xl">
-        <h2 className="text-2xl pt-4 font-medium">Why should I use it ?</h2>
+        <h2 className="text-2xl pt-4 font-medium">{lang.Features.title}</h2>
     </div>
 
     <div
@@ -13,15 +29,15 @@ function Features() {
       <div className="flex items-start">
         <span className="flex-shrink-0 p-4 bg-gray-800 rounded-lg">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="rgba(255,255,255,0.1)" viewBox="0 0 24 24" stroke="#7dd3fc" strokeWidth="2">
-          <path strokeLinecap="round" stroke-Linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
         </svg>
         </span>
 
         <div className="ml-4">
-          <h2 className="text-lg font-bold">Lightweight</h2>
+          <h2 className="text-lg font-bold">{lang.Features.f1t}</h2>
 
           <p className="mt-1 text-sm text-slate-400">
-            less than 0.3kb uncompressed
+          {lang.Features.f1d}
           </p>
         </div>
       </div>
@@ -34,10 +50,10 @@ function Features() {
         </span>
 
         <div className="ml-4">
-          <h2 className="text-lg font-bold">Super Fast</h2>
+          <h2 className="text-lg font-bold">{lang.Features.f2t}</h2>
 
           <p className="mt-1 text-sm text-slate-400">
-            Distribued worldwide, your users will be served from the nearest edge server
+          {lang.Features.f2d}
           </p>
         </div>
       </div>
@@ -50,10 +66,10 @@ function Features() {
         </span>
 
         <div className="ml-4">
-          <h2 className="text-lg font-bold">Quick Setup</h2>
+          <h2 className="text-lg font-bold">{lang.Features.f3t}</h2>
 
           <p className="mt-1 text-sm text-slate-400">
-            Zero configuration, you don&apos;t need an API key, just add the script tag, and you are ready!
+            {lang.Features.f3d}
           </p>
         </div>
       </div>

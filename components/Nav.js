@@ -1,27 +1,27 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
-  MenuIcon,
   XIcon,
 } from '@heroicons/react/outline'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon, GlobeIcon } from '@heroicons/react/solid'
 import ReactCountryFlag from "react-country-flag"
+import Link from 'next/link'
 
 const solutions = [
   {
-    name: 'French',
-    href: '#',
-    code: "FR",
+    name: 'English',
+    locale: "en",
+    code: "gb"
   },
   {
-    name: 'Spanish',
-    href: '#',
-    code: "ES",
+    name: 'Français',
+    locale: "fr",
+    code: "fr"
   },
   {
-    name: 'Polish',
-    href: '#',
-    code: "PL",
+    name: '中国',
+    locale: "cn",
+    code: "cn"
   }
 ]
 
@@ -58,9 +58,9 @@ export default function Nav() {
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button disabled className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100-TEMP focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100-TEMP focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <GlobeIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
@@ -68,17 +68,16 @@ export default function Nav() {
               {({ open }) => (
                 <>
                   <Popover.Button
-                    disabled
                     className={classNames(
-                      open ? 'text-slate-200' : 'text-slate-600',
-                      'group rounded-md inline-flex items-center text-base font-medium hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-gray-700'
+                      open ? 'text-slate-400' : 'text-slate-400',
+                      'group rounded-md md:inline-flex items-center text-base font-medium hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-gray-700'
                     )}
                   >
                     <span>Language</span>
                     <ChevronDownIcon
                       className={classNames(
-                        open ? 'text-slate-400' : 'text-slate-600',
-                        'ml-2 h-5 w-5 group-hover:text-slate-700'
+                        open ? 'text-slate-400' : 'text-slate-400',
+                        'ml-2 h-5 w-5 group-hover:text-slate-500'
                       )}
                       aria-hidden="true"
                     />
@@ -93,20 +92,20 @@ export default function Nav() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-[15rem] sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-[13rem] sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {solutions.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                            >
-                              <ReactCountryFlag className="mt-1" countryCode={item.code} />
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">{item.name}</p>
-                              </div>
-                            </a>
+                            <Link key={item.name} href='/' locale={item.locale} >
+                              <a
+                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-100"
+                              >
+                                <ReactCountryFlag className="mt-1" countryCode={item.code} />
+                                <div className="ml-4">
+                                  <p className="text-base font-medium text-gray-900">{item.name}</p>
+                                </div>
+                              </a>
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -164,14 +163,12 @@ export default function Nav() {
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   {solutions.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                    >
-                      <ReactCountryFlag className="mt-1" countryCode={item.code} />
-                      <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
-                    </a>
+                    <Link key={item.name} href='/' locale={item.locale} >
+                      <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                        <ReactCountryFlag className="mt-1" countryCode={item.code} />
+                        <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
+                      </a>
+                    </Link>
                   ))}
                 </nav>
               </div>
