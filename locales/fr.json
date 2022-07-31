@@ -1,8 +1,11 @@
 {
+    "Global": {
+        "metadesc": "Montrez un contenu personnalisé à vos utilisateurs en fonction de leur géolocalisation IP, avec un fichier léger, rapide et distribué dans le monde entier."
+    },
     "Hero": {
         "title": "Géolocalisation sous forme de script.",
         "desc1": "Montrez un contenu personnalisé à vos utilisateurs en fonction de leur géolocalisation IP, avec un fichier ",
-        "desc2" : "léger",
+        "desc2" : "léger,",
         "desc3": "rapide",
         "desc4": "et",
         "desc5": "distribué dans le monde entier",

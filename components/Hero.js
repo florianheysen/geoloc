@@ -35,7 +35,7 @@ function Nav() {
                 </h1>
                 <p className="lead my-5 text-lg text-slate-400">
                     {lang.Hero.desc1}
-                    <span className="text-sky-400">{lang.Hero.desc2}</span>, <span className="text-sky-400">{lang.Hero.desc3}</span> {lang.Hero.desc4} <span className="text-sky-400">{lang.Hero.desc5}</span>{lang.Hero.desc6}
+                    <span className="text-sky-400">{lang.Hero.desc2}</span> <span className="text-sky-400">{lang.Hero.desc3}</span> {lang.Hero.desc4} <span className="text-sky-400">{lang.Hero.desc5}</span>{lang.Hero.desc6}
                 </p>
                 <a href="#start" className="text-white focus:outline-none focus:ring-4 font-semibold rounded-lg text-sm px-5 py-3 mr-2 mb-2 bg-gray-800 hover:bg-gray-700 focus:ring-sky-400">
                     {lang.Hero.cta1}

@@ -1,8 +1,11 @@
 {   
+    "Global": {
+        "metadesc": "Show personalized content to you users based on their IP geolocation, with a small, fast and globally distributed javascript file."
+    },
     "Hero": {
         "title": "Geolocation as a script.",
         "desc1": "Show personalized content to you users based on their IP geolocation, with a ",
-        "desc2" : "small",
+        "desc2" : "small,",
         "desc3": "fast",
         "desc4": "and",
         "desc5": "globally distributed ",
