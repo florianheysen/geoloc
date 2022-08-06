@@ -68,6 +68,7 @@ export default function Nav() {
               {({ open }) => (
                 <>
                   <Popover.Button
+                    onClick={splitbee.track("Language switcher")}
                     className={classNames(
                       open ? 'text-slate-400' : 'text-slate-400',
                       'group rounded-md md:inline-flex items-center text-base font-medium hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-gray-700'
@@ -134,7 +135,7 @@ export default function Nav() {
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                <svg className="w-10 h-10" width="178" height="169" viewBox="0 0 178 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-10 h-10" onClick={splitbee.track("Language switcher")} width="178" height="169" viewBox="0 0 178 169" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M156.125 60.1904V40.0417C156.125 31.2453 152.631 22.8092 146.411 16.5893C140.191 10.3693 131.755 6.875 122.958 6.875H40.0417C31.2453 6.875 22.8097 10.3693 16.5898 16.5893C10.3698 22.8092 6.875 31.2453 6.875 40.0417V122.958C6.875 131.755 10.3698 140.191 16.5898 146.411C22.8097 152.631 31.2453 156.125 40.0417 156.125H85.3144" fill="url(#paint0_linear_4_27)"/>
                   <path d="M156.125 60.1904V40.0417C156.125 31.2453 152.631 22.8092 146.411 16.5893C140.191 10.3693 131.755 6.875 122.958 6.875H40.0417C31.2453 6.875 22.8097 10.3693 16.5898 16.5893C10.3698 22.8092 6.875 31.2453 6.875 40.0417V122.958C6.875 131.755 10.3698 140.191 16.5898 146.411C22.8097 152.631 31.2453 156.125 40.0417 156.125H85.3144" stroke="#6DC4FE" strokeWidth="13" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M101.403 66.7409L13.6768 19.893" stroke="#6DC4FE" strokeWidth="13" strokeLinecap="round" strokeLinejoin="round"/>

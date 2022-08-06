@@ -1,3 +1,4 @@
+import splitbee from '@splitbee/web';
 import Head from 'next/head'
 import axios from 'axios'
 import { useState, useEffect } from 'react';
@@ -11,6 +12,8 @@ import Features from '../components/Features'
 import en from '../locales/en'
 import fr from '../locales/fr'
 import cn from '../locales/cn'
+
+splitbee.init()
 
 export default function Home() {
 
@@ -67,7 +70,6 @@ export default function Home() {
       <Hero data={data} />
       <Features />
       <HowItWorks data={data}  />
-
 
       <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
       <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
