@@ -7,7 +7,7 @@
 Show personalized content to you users based on their IP geolocation, with a small, fast and globally distributed javascript file.
 
 ```html
-<script defer src="https://geoloc-red.vercel.app/api/js"></script>
+<script defer src="https://geoloc.dev/api/js"></script>
 <script>
     document.addEventListener('geoloc-loaded', () => {
        console.log(geoloc.country) // Will return FR 
@@ -45,7 +45,7 @@ You can load the script asynchronously that it will have little to no impact on 
 
 ```html
 <!-- Load the script tag with either defer or async attribute -->
-<script defer src="https://geoloc-red.vercel.app/api/js"></script>
+<script defer src="https://geoloc.dev/api/js"></script>
 
 <!-- Wait for the 'geoloc-loaded' event before using the global 'geoloc' variable -->
 <script>
@@ -60,7 +60,7 @@ You can load the script asynchronously that it will have little to no impact on 
 If you don't need the geolocation information to be available globally and only want to fetch it on-demand, you can use the /json endpoint, see example below.
 ```javascript
 async function getGeolocInfo(){
-    const response = await fetch('https://geoloc-red.vercel.app/api/json');
+    const response = await fetch('https://geoloc.dev/api/json');
     return await response.json();
 }
 ```
