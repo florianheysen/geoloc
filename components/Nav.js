@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
+import splitbee from '@splitbee/web';
 import {
   XIcon,
 } from '@heroicons/react/outline'
@@ -30,6 +31,9 @@ function classNames(...classes) {
 }
 
 export default function Nav() {
+
+  splitbee.init()
+
   return (
     <Popover className="relative bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
