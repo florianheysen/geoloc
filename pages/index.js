@@ -46,16 +46,16 @@ export default function Home() {
         <meta name="description" content={lang.Hero.desc1}/>
 
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content={"https://geoloc-red.vercel.app/"+locale}/>
+        <meta property="og:url" content={"https://geoloc.dev/"+locale}/>
         <meta property="og:title" content={"Geoloc — " + lang.Hero.title}/>
         <meta property="og:description" content={lang.Hero.desc1}/>
-        <meta property="og:image" content={"https://geoloc-red.vercel.app/image-" + locale + ".jpg"}/>
+        <meta property="og:image" content={"https://geoloc.dev/image-" + locale + ".jpg"}/>
 
         <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content={"https://geoloc-red.vercel.app/"+locale}/>
+        <meta property="twitter:url" content={"https://geoloc.dev/"+locale}/>
         <meta property="twitter:title" content={"Geoloc — " + lang.Hero.title}/>
         <meta property="twitter:description" content={lang.Hero.desc1}/>
-        <meta property="twitter:image" content={"https://geoloc-red.vercel.app/image-" + locale + ".jpg"}/>
+        <meta property="twitter:image" content={"https://geoloc.dev/image-" + locale + ".jpg"}/>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />

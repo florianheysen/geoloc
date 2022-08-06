@@ -27,7 +27,7 @@ function HowItWorks({data}) {
 }`
 
 var code = String.raw`<!-- ${lang.How.comment1} -->
-<script defer src="https://geoloc-red.vercel.app/api/js"></script>
+<script defer src="https://geoloc.dev/api/js"></script>
 
 <!-- ${lang.How.comment2} -->
 <script>
@@ -37,7 +37,7 @@ var code = String.raw`<!-- ${lang.How.comment1} -->
 </script>`
 
 var javascript = String.raw`async function getGeolocInfo(){
-    const response = await fetch('https://geoloc-red.vercel.app/api/json');
+    const response = await fetch('https://geoloc.dev/api/json');
     return await response.json();
 }`
 

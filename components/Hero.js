@@ -18,7 +18,7 @@ function Nav() {
     }
 
     var script = String.raw
-`<script defer src="https://geoloc-red.vercel.app/api/js"></script>
+`<script defer src="https://geoloc.dev/api/js"></script>
 <script>
         document.addEventListener('geoloc-loaded', () => {
             console.log(geoloc.country) // ${lang.Hero.comment} 
