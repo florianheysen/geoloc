@@ -3,7 +3,7 @@ const RequestIp = require("@supercharge/request-ip");
 const NodeCache = require("node-cache");
 const axios = require("axios").default;
 
-const Cache = new NodeCache({ stdTTL : 1})
+const Cache = new NodeCache({ stdTTL : 20})
 
 const analytics = new SplitbeeAnalytics('XVE9367GCHKF');
 
