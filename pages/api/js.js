@@ -1,10 +1,17 @@
+const { SplitbeeAnalytics } = require('@splitbee/node');
 const RequestIp = require("@supercharge/request-ip");
 const NodeCache = require("node-cache");
 const axios = require("axios").default;
 
 const Cache = new NodeCache({ stdTTL : 1})
 
+const analytics = new SplitbeeAnalytics('XVE9367GCHKF');
+
 export default function handler(req, res) {
+    analytics.track({
+      requestIp: RequestIp.getClientIp(req),
+      event: 'GET /api/js/'
+    });
     if(Cache.has('codeCached')){
         res.write(Cache.get('codeCached'))
         res.end();
